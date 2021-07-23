@@ -1,12 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RC.Interfaces;
+using System;
 
 namespace RC.Models
 {
-    class Garage
+    class Garage : IParkable
     {
+        public bool IsFree { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public bool IsPrivate { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public void FreePlace()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TakePlace()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

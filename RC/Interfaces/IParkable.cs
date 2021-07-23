@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RC.Interfaces
 {
-    interface IParkable
+    public interface IParkable
     {
+        public bool IsFree { get; set; }
+        public bool IsPrivate { get; set; }
+
+        public void FreePlace();
+        public void TakePlace();
     }
 }

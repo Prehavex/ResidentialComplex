@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RC.Models
+namespace RC.Modules
 {
-    class PaidServices
+    class DwellerControl
     {
     }
 }
