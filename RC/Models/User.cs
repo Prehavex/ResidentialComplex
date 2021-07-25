@@ -9,16 +9,13 @@ namespace RC.Models
         public string Name { get; set; }
         public string Patronymic { get; set; }
         public DateTime BirthDay { get; set; }
+        public bool IsHasCar { get; set; }
         public int? PhoneNumber { get; set; }
         public string? Email { get; set; }
 
-        public User()
-        {
-        }
-
         public string GetFullName()
         {
-            throw new NotImplementedException();
+            return Surname + " " + Name + " " + Patronymic;
         }
 
     }

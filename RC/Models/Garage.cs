@@ -3,19 +3,26 @@ using System;
 
 namespace RC.Models
 {
-    class Garage : IParkable
+    public class Garage : IParkable
     {
-        public bool IsFree { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool IsPrivate { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public Dweller Owner { get; set; }
+        public bool IsFree { get { return IsFree; } set { IsFree = Owner == null ? true : false; } }
+        public bool IsPrivate { get { return IsPrivate; } set { IsPrivate = true; } }
 
         public void FreePlace()
         {
-            throw new NotImplementedException();
+            Owner = null;
+            IsFree = true;
         }
 
         public void TakePlace()
         {
-            throw new NotImplementedException();
+            IsFree = false;
+        }
+        public void BecomeBought(Dweller NewOwner)
+        {
+            Owner = NewOwner;
+            TakePlace();
         }
     }
 }

@@ -2,11 +2,17 @@
 
 namespace RC.Models
 {
-    class Dweller : User
+    public class Dweller : User
     {
+        public Apartment PersonalApartment { get; set; }
+        public Garage PersonalGarage { get; set; }
         public bool IsAdult()
         {
-            throw new NotImplementedException();
+            if (BirthDay.AddYears(18).CompareTo(DateTime.Today) <= 0)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

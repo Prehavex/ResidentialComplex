@@ -4,17 +4,18 @@ namespace RC.Models
 {
     class ParkingPlace : IParkable
     {
-        public bool IsFree { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-        public bool IsPrivate { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+        public bool IsFree { get; set; }
+        public bool IsPrivate { get { return IsPrivate; } set { IsPrivate = true; } }
+        public bool IsStuffOnly { get; set; }
 
         public void FreePlace()
         {
-            throw new System.NotImplementedException();
+            IsFree = true;
         }
 
         public void TakePlace()
         {
-            throw new System.NotImplementedException();
+            IsFree = false;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RC.Models;
+using System;
 
 namespace RC.Interfaces
 {
