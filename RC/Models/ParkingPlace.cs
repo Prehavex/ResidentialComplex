@@ -2,10 +2,11 @@
 
 namespace RC.Models
 {
-    class ParkingPlace : IParkable
+    public class ParkingPlace : IParkable
     {
+        public int Id { get; set; }
         public bool IsFree { get; set; }
-        public bool IsPrivate { get { return IsPrivate; } set { IsPrivate = true; } }
+        public bool IsPrivate { get { return false; } set { IsPrivate = false; } }
         public bool IsStuffOnly { get; set; }
 
         public void FreePlace()
