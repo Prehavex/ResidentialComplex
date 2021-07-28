@@ -6,7 +6,7 @@ namespace RC.Modules
 {
     public class ParkingObserving
     {
-        public void SerializeParkPlace(string path, ParkingPlace parkingPlace)
+        public static void SerializeParkPlace(string path, ParkingPlace parkingPlace)
         {
             File.WriteAllText(path, JsonSerializer.Serialize<ParkingPlace>(parkingPlace));
         }
