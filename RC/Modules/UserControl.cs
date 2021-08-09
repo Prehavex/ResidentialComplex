@@ -4,13 +4,12 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 namespace RC.Modules
-{
+{ 
     public class UserControl<Type> where Type : User
     {
         public static List<Type> UsersByNames(string name, List<Type> users) //could be used for name,surname and patronymic as well
         {
-            string pattern = String.Format($"^{name.ToLower()}$");
-            Regex regex = new Regex(pattern);
+            Regex regex = new Regex(String.Format($"^{name.ToLower()}$"));
             List<Type> needUsers = new List<Type>();
             foreach (Type user in users)
             {

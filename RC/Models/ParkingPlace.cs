@@ -6,7 +6,7 @@ namespace RC.Models
     {
         public int Id { get; set; }
         public bool IsFree { get; set; }
-        public bool IsPrivate { get { return false; } set { IsPrivate = false; } }
+        public bool IsPrivate { get; set; }
         public bool IsStuffOnly { get; set; }
 
         public void FreePlace()
