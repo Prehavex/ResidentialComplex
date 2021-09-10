@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DAL.DataContext;
+
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ResidentialComplex.Models;
 using System.Diagnostics;
@@ -9,7 +11,7 @@ namespace ResidentialComplex.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, RCContext db)
         {
             _logger = logger;
         }

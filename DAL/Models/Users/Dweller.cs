@@ -6,7 +6,6 @@ namespace DAL.Models
     {
         public Guid? ApartmentId { get; set; }
         public Apartment PersonalApartment { get; set; }
-        public Guid? GarageId { get; set; }
         public Garage PersonalGarage { get; set; }
         public bool IsAdult()
         {

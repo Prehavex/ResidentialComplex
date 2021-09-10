@@ -8,7 +8,7 @@ namespace DAL.Models
         public Guid Id { get; set; }
         public string Number { get; set; }
         public bool IsFree { get { return Owner == null ? true : false; } set { IsFree = Owner == null ? true : false; } }
-        public Guid DwellerId { get; set; }
+        public Guid? DwellerId { get; set; }
         public Dweller Owner { get; set; }
 
         public void FreePlace()
