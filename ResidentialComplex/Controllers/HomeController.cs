@@ -1,24 +1,27 @@
-﻿using DAL.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using ResidentialComplex.Models;
 using System.Diagnostics;
 
-namespace ResidentalComplex.Controllers
+namespace ResidentialComplex.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ILogger<HomeController> _logger;
+
+        public HomeController(ILogger<HomeController> logger)
+        {
+            _logger = logger;
+        }
+
         public IActionResult Index()
         {
             return View();
         }
-        [HttpGet]
-        public IActionResult AddDweller()
+
+        public IActionResult Privacy()
         {
             return View();
-        }
-        [HttpPost]
-        public IActionResult AddDweller(Dweller dweller)
-        {
-            return View("Index");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

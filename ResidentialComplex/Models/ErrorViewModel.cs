@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace ResidentalComplex.Models
+namespace ResidentialComplex.Models
 {
     public class ErrorViewModel
     {
