@@ -11,9 +11,21 @@ namespace DAL.DataContext
         public DbSet<House> Houses { get; set; }
         public DbSet<ParkingPlace> ParkingPlaces { get; set; }
         public DbSet<Garage> Garages { get; set; }
+        public RCContext()
+        {
+
+        }
         public RCContext(DbContextOptions<RCContext> options) : base(options)
         {
             Database.EnsureCreated();
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+        }
+        protected override void OnConfiguring(DbContextOptionsBuilder builder)
+        {
+
         }
     }
 }

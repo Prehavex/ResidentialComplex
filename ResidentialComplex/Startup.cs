@@ -1,5 +1,5 @@
 using DAL.DataContext;
-
+using DAL.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -27,6 +27,7 @@ namespace ResidentialComplex
         {
             string connection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<RCContext>(options => options.UseSqlServer(connection));
+            services.AddTransient<UnitOfWork>();
             services.AddControllersWithViews();
         }
 
